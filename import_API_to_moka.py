@@ -51,7 +51,7 @@ class ssh_n_run():
 		# loop through the standard out from the execute command function
 		for proband in self.standard_out:
 			# use the standard out to create a insert query
-			self.insert_query =  "insert into GEL100KAnalysisStatus (GELProbandID,IRID,GELProgram,LabStatus,DateAdded,NegNeg) values " + i.rstrip()
+			self.insert_query =  "insert into GEL100KAnalysisStatus (GELProbandID,IRID,GELProgram,LabStatus,DateAdded,NegNeg) values " + proband.rstrip()
 			# execute the inster query
 			self.insert_query_function()
 			count += 1
